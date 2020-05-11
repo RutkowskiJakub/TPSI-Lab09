@@ -59,12 +59,12 @@ public class BlogRepository {
     }
 
     
-    public void deletePost(String title) throws SQLException{
+    public void deletePost(String id) throws SQLException{
         String sql = "delete from blog_post where id=?";
         
         try(Connection con = dataSource.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql)){
-            ps.setString(1, title);
+            ps.setString(1, id);
             ps.executeUpdate();
         }
     }
