@@ -21,10 +21,10 @@
             <h2 th:text="${Lista.title}"></h2>
             <p th:text="${Lista.content}"></p>
             <form action="/deletepost" method="POST">
-                <input name="title" th:value="${Lista.title}" type="hidden"/>
+<!--                <input name="title" th:value="${Lista.title}" type="hidden"/>
+                <input type="submit" value="Usuń"/>-->
+                <input name="id" th:value="${Lista.id}" type="hidden"/>
                 <input type="submit" value="Usuń"/>
-<!--                <input name="id" th:value="${Lista.id}"/>
-                <input type="submit" value="Usuń po id"/>-->
             </form>
         </div>
     </body>

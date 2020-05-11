@@ -60,7 +60,7 @@ public class BlogRepository {
 
     
     public void deletePost(String title) throws SQLException{
-        String sql = "delete from blog_post where title=?";
+        String sql = "delete from blog_post where id=?";
         
         try(Connection con = dataSource.getConnection();
                 PreparedStatement ps = con.prepareStatement(sql)){

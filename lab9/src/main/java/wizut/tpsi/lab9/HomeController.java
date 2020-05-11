@@ -34,7 +34,7 @@ public class HomeController {
     
     @PostMapping("/deletepost")
     public String deletePost(BlogPost post) throws SQLException {
-        blog.deletePost(post.getTitle());
+        blog.deletePost(Long.toString(post.getId()));
         return "redirect:/";
     }
     
